@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06243b">
+<link rel="manifest" href="manifest.json">
+<title>Apni Dunia</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Naskh Arabic",sans-serif;background:#f4f7fa;color:#102433}
+header{background:#06243b;color:#fff;padding:18px 16px 14px;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px}.logo{font-size:35px}.brand h1{margin:0;font-size:28px}.brand b{color:#ffd22e}.sub{font-size:11px;opacity:.8}
+nav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}button{border:0;border-radius:12px;padding:11px;font-weight:700;cursor:pointer}
+nav button{background:#123b57;color:#fff}nav button.active{background:#06bd68}
+main{max-width:900px;margin:auto;padding:14px}.hero{background:linear-gradient(135deg,#0967ad,#06243b);color:#fff;border-radius:18px;padding:22px;margin-bottom:14px}
+.hero h2{margin:0 0 6px;font-size:25px}.hero p{margin:0;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 2px 12px #0000000d}.icon{font-size:28px}.card h3{margin:7px 0 3px}.muted{color:#667781;font-size:13px}
+.news{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e5e9ed}.news:last-child{border:0}.thumb{width:82px;height:62px;border-radius:10px;background:#dfeaf1;display:grid;place-items:center;font-size:25px;flex:none}
+.score{background:#06243b;color:#fff;border-radius:16px;padding:16px}.teams{display:flex;justify-content:space-between;align-items:center;text-align:center}.run{font-size:26px;font-weight:800}
+.gamegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.game{background:#fff;border-radius:15px;padding:18px;text-align:center}.game .g{font-size:42px}
+.ad{background:#fff4c7;border:1px dashed #c9a900;border-radius:14px;padding:14px;text-align:center;margin:12px 0}.hidden{display:none}
+footer{text-align:center;color:#71808a;padding:25px;font-size:12px}
+@media(min-width:650px){.grid,.gamegrid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">🌍</div><div><h1>Apni <b>Dunia</b></h1><div class="sub">News • Weather • Cricket • Games</div></div></div>
+  <nav>
+    <button class="active" onclick="show('home',this)">🏠 ہوم</button>
+    <button onclick="show('news',this)">📰 خبریں</button>
+    <button onclick="show('cricket',this)">🏏 کرکٹ</button>
+    <button onclick="show('games',this)">🎮 گیمز</button>
+  </nav>
+</header>
+
+<main>
+<section id="home">
+ <div class="hero"><h2>اپنی دنیا، ہر خبر آپ کے ساتھ</h2><p>تازہ خبریں، موسم، لائیو کرکٹ اور تفریح — ایک ہی ایپ میں۔</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">📰</div><h3>تازہ خبریں</h3><div class="muted">پاکستان اور دنیا</div></div>
+  <div class="card"><div class="icon">🌤️</div><h3>موسم کا حال</h3><div class="muted">آپ کے شہر کا موسم</div></div>
+  <div class="card"><div class="icon">🏏</div><h3>لائیو کرکٹ</h3><div class="muted">اسکور اور میچز</div></div>
+  <div class="card"><div class="icon">🎮</div><h3>گیمز</h3><div class="muted">کھیلیں اور تفریح کریں</div></div>
+ </div>
+ <div class="ad">📢 <b>اشتہار کی جگہ</b><br><span class="muted">یہاں Google AdMob اشتہار لگایا جائے گا۔</span></div>
+ <div class="card"><h3>🔥 بریکنگ نیوز</h3>
+  <div class="news"><div class="thumb">📰</div><div><b>اہم خبر کا نمونہ</b><div class="muted">Live news API لگنے کے بعد یہاں تازہ خبر آئے گی۔</div></div></div>
+  <div class="news"><div class="thumb">🌧️</div><div><b>موسم کی تازہ صورتحال</b><div class="muted">Weather API سے خودکار اپڈیٹ۔</div></div></div>
+ </div>
+</section>
+
+<section id="news" class="hidden">
+ <div class="card"><h2>📰 تازہ خبریں</h2><p class="muted">پاکستان • دنیا • کھیل • کاروبار</p>
+  <div class="news"><div class="thumb">🇵🇰</div><div><b>پاکستان کی اہم خبر</b><div class="muted">API سے اصل خبر آنے پر یہ حصہ خود اپڈیٹ ہوگا۔</div></div></div>
+  <div class="news"><div class="thumb">🌍</div><div><b>دنیا کی تازہ خبر</b><div class="muted">News feed integration</div></div></div>
+  <div class="news"><div class="thumb">💼</div><div><b>کاروباری خبریں</b><div class="muted">Business news category</div></div></div>
+ </div>
+</section>
+
+<section id="cricket" class="hidden">
+ <div class="score"><h3>🔴 LIVE CRICKET</h3><div class="teams"><div>🇵🇰<br><b>پاکستان</b><div class="run">178/4</div></div><div>VS<br><small>18.2 اوور</small></div><div>🇮🇳<br><b>انڈیا</b><div class="run">182/6</div></div></div></div>
+ <div class="ad">📢 <b>Live Cricket Ad</b><br><span class="muted">AdMob/ہمسایہ اشتہار یہاں لگ سکتا ہے۔</span></div>
+ <div class="card"><h3>آج کے میچز</h3><p>🇵🇰 پاکستان vs 🇱🇰 سری لنکا — 2:00 PM</p><p>🏴 انگلینڈ vs 🇦🇺 آسٹریلیا — 6:00 PM</p></div>
+</section>
+
+<section id="games" class="hidden">
+ <div class="card"><h2>🎮 گیمز</h2><p class="muted">ابتدائی ورژن میں نمونہ گیمز؛ اصل گیم SDK بعد میں شامل ہوگا۔</p></div>
+ <div class="gamegrid">
+  <div class="game"><div class="g">⭕❌</div><b>Tic Tac Toe</b><br><button onclick="alert('Game module یہاں شامل کیا جائے گا')">Play</button></div>
+  <div class="game"><div class="g">🔴🟡</div><b>Bubble</b><br><button onclick="alert('Game module یہاں شامل کیا جائے گا')">Play</button></div>
+  <div class="game"><div class="g">🧩</div><b>Puzzle</b><br><button onclick="alert('Game module یہاں شامل کیا جائے گا')">Play</button></div>
+  <div class="game"><div class="g">🏏</div><b>Cricket Mini Game</b><br><button onclick="alert('Game module یہاں شامل کیا جائے گا')">Play</button></div>
+ </div>
+ <div class="ad">🎁 <b>Rewarded Ads</b><br><span class="muted">گیم میں rewarded ads سے monetization شامل کی جا سکتی ہے۔</span></div>
+</section>
+</main>
+<footer>Apni Dunia © 2026 — یہ prototype ہے۔ Live data اور monetization کے لیے API keys اور publisher accounts درکار ہوں گے۔</footer>
+<script>
+function show(id,btn){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');scrollTo(0,0)}
+</script>
+</body></html>
