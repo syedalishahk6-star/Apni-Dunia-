@@ -1,1 +1,10 @@
-
+{
+  "name": "Apni Dunia",
+  "short_name": "Apni Dunia",
+  "description": "Apni Dunia - News, Cricket, Weather, Games and More",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#06243b",
+  "theme_color": "#06243b",
+  "orientation": "portrait"
+}
